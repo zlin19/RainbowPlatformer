@@ -27,3 +27,11 @@ style.css owns the gray uncollected progress state; only .done takes the shared 
 ## Language and continuation update
 
 The top-right language control switches English/Simplified Chinese and remembers the choice locally. Browser language supplies the initial default. Localize controls, messages, built-in metadata and canvas labels while preserving player-authored level names and live game/editor state. After victory, explicitly ask whether to continue to the next level; retain replay and free selection. Advance within the current built-in/custom list only. Hide continuation at list end and during an editor playtest, and never equate finishing the last level with completing every level.
+
+## Strict sequence and four-face contacts
+
+All four faces trigger color collection on contact entry. A continuous contact with a block is counted once; separation and re-entry counts again. Only progress + 1 advances the sequence. Repeating the latest collected color is a safe no-op (including purple after all six), even after touching plain platforms. Earlier colors and skipped-ahead colors clear progress without teleporting the player. Plain platforms preserve progress. Spikes/falls still reset the run. The error message names touched/expected color, or the flag when all six were complete. Level-specific hints belong only to curated built-ins, not edited/custom copies. The first three levels have safe recovery floors; the fourth adds hazards.
+
+## Musical feedback
+
+audio.js uses the original synthesized C-major notes selected by the user after auditioning both versions. Reset/start=C4; colors 1–6=D4 through B4; victory=C5. Safe repeats are silent. First interaction unlocks playback; only the current pending cue is kept. Muting/editor entry cancels pending and active sounds; mute survives reload; activation failures offer retry without blocking gameplay. Downloaded piano files are retained as reference assets and are not in the runtime script chain.

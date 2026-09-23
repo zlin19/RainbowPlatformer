@@ -1,6 +1,19 @@
 (function(root){
 'use strict';
 const zh={
+"Sound credits":"音效来源",
+"♪ Retry sound":"♪ 重试音效",
+"♪ Enable sound":"♪ 点击启音",
+"The safe detour":"安全绕行",
+"Orange is overhead; yellow is ahead. Touch orange before taking the shortcut.":"橙色在上，黄色在前。先碰橙色，再继续向前。",
+"A safe detour: use plain stones to reach orange before the tempting yellow.":"前方的黄色先别碰：借普通平台折返，先找到橙色。",
+"Keep the sequence through high and low jumps. The latest color is safe to touch again.":"在高低平台间维持顺序，小心尖刺。刚收集的颜色可以重复碰。",
+"Touch red, then orange, yellow, green, blue and purple. Any face of a color block counts.":"按红、橙、黄、绿、蓝、紫依次收集。碰到彩色砖的任意一面都算！",
+"After red, jump toward the plain stone. Touch orange from below or the side before yellow.":"收集红色后，跳向普通平台，从底面或侧面碰到橙色，再去碰黄色。",
+"Plain stones keep your colors. Take the detour to orange before touching yellow.":"普通平台不会打断进度。借它折返取橙色，再去碰前面的黄色。",
+"The latest color is safe to repeat. Earlier colors or skipping ahead clear your progress.":"刚收集的颜色可以重复碰；碰回更早的颜色或跳过顺序，进度清零。",
+"Any face counts. The latest color is safe to repeat; other wrong colors reset progress.":"四面触碰都算。刚收集的颜色可重复碰，其他错序触碰会清空进度。",
+"The next color is highlighted above. Plain blocks preserve progress.":"头顶边框标出下一个颜色，普通平台不会打断进度。",
   "Block":"普通平台", "Spike":"尖刺", "Start":"起点", "Flag":"旗帜", "Erase":"擦除", "Select":"选择",
   "Step by Step — A little platform adventure": "彩虹跃台 — 一步一跃的小冒险",
   "step by step": "一步一跃",
@@ -188,6 +201,7 @@ function create(storage,preferred='en'){
  let language=/^zh/i.test(preferred)?'zh':'en';try{const saved=storage.getItem('step-by-step-language');if(saved==='zh'||saved==='en')language=saved;}catch{}
  function t(source){source=String(source??'');if(language==='en')return source;if(Object.hasOwn(zh,source))return zh[source];
  let match;
+ if((match=source.match(/^That was (red|orange|yellow|green|blue|purple)\. Expected (red|orange|yellow|green|blue|purple|the flag)\. All colors cleared — start with red\.$/)))return '碰到了'+t(match[1])+'色；本应'+(match[2]==='the flag'?'前往旗帜':'收集'+t(match[2])+'色')+'。进度已清空，请从红色重新收集。';
  if((match=source.match(/^RUN (\d+)$/)))return '第 '+match[1]+' 次尝试';
  if((match=source.match(/^LEVEL (\d+) · (.+)$/)))return '第 '+match[1]+' 关 · '+t(match[2]);
  if((match=source.match(/^(\d+) \/ 10 complete$/)))return '已通关 '+match[1]+' / 10';

@@ -39,3 +39,11 @@ Show every built-in level without unlock gates. Show real layout thumbnails and 
 ## Language and continuation update
 
 The top-right language control switches English/Simplified Chinese and remembers the choice locally. Browser language supplies the initial default. Localize controls, messages, built-in metadata and canvas labels while preserving player-authored level names and live game/editor state. After victory, explicitly ask whether to continue to the next level; retain replay and free selection. Advance within the current built-in/custom list only. Hide continuation at list end and during an editor playtest, and never equate finishing the last level with completing every level.
+
+## Sequence teaching
+
+Maintain the existing palette and next-color arrow/outlined progress slot. Introductory geometry teaches the rule before adding danger: a sequential first trail, an overhead orange contact on the second, and a plain-platform return path before yellow on the third. The first three keep a safe recovery floor. The fourth applies the sequence above spikes. Wrong contacts name the touched and expected colors and gray out all progress; the latest collected color remains safe to repeat, but earlier colors are wrong. All four block faces count, once per uninterrupted contact. Custom playtests share these rules without inherited curated route hints.
+
+## Sound feedback
+
+Use the original synthesized sound selected after the MP3 comparison: sine fundamental at gain 0.11, octave overtone at gain 0.018, 8 ms attack, exponential release to 0.0001. Ordinary notes last 0.3 seconds, victory 0.85 seconds. C4 introduces/resets a run; six colors rise through D4–B4; victory completes the scale at C5. Safe repeats stay silent. Keep the existing top-right sound control and localized waiting/on/off/retry labels.

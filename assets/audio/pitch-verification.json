@@ -1,0 +1,45 @@
+{
+  "method": "FFT strongest peak between 200 and 600 Hz; 0.1\u20131.0s mono segment; 22050 Hz, Hann window, 131072-point FFT. Estimates are limited by FFT resolution.",
+  "notes": [
+    {
+      "note": "C4",
+      "fundamentalHz": 261.59,
+      "centsFromTarget": -0.2
+    },
+    {
+      "note": "D4",
+      "fundamentalHz": 293.56,
+      "centsFromTarget": -0.63
+    },
+    {
+      "note": "E4",
+      "fundamentalHz": 329.56,
+      "centsFromTarget": -0.36
+    },
+    {
+      "note": "F4",
+      "fundamentalHz": 349.07,
+      "centsFromTarget": -0.77
+    },
+    {
+      "note": "G4",
+      "fundamentalHz": 391.97,
+      "centsFromTarget": -0.11
+    },
+    {
+      "note": "A4",
+      "fundamentalHz": 440.08,
+      "centsFromTarget": 0.33
+    },
+    {
+      "note": "B4",
+      "fundamentalHz": 493.92,
+      "centsFromTarget": 0.12
+    },
+    {
+      "note": "C5",
+      "fundamentalHz": 523.19,
+      "centsFromTarget": -0.2
+    }
+  ]
+}
