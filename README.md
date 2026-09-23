@@ -27,6 +27,12 @@ Choose level opens all ten built-in trails immediately; no unlocks are required.
 
 In the editor, enter a name and use **Save as extra level** to add a separate playable level. Select that level from **Your extra levels** to play. Edit it and choose **Save changes** to update the saved level, or **Save as extra level** to make another copy. Built-ins are never overwritten. **Open editor draft** restores your latest working layout, including drafts made before the level library was added. Levels and completion badges stay in this browser on this device; JSON export remains available for backups and transfers. Custom reachability remains up to the designer.
 
-Uncollected progress slots are gray, including the next required color; collected slots gain their color and a check. Winning triggers three waves of rainbow confetti and expanding colored rings at the flag, then offers replay or any other level. Reduced-motion users see a static rainbow halo instead.
+Uncollected progress slots are gray, including the next required color; collected slots gain their color and a check. Winning triggers three waves of rainbow confetti and expanding colored rings at the flag, then asks whether to enter the next level, with replay and free level selection also available. Reduced-motion users see a static rainbow halo instead.
 
 Additional checks: `node test-levels.js` simulates every built-in route and tests library persistence, update behavior, storage failure, and effect drawing. `node test-app.js` exercises app-level selection, completion, effects, restart, save/update, and reload with a lightweight DOM harness. `tests/victory-preview.html` is an isolated visual effect test page.
+
+## Languages and next-level prompts
+
+Use the top-right **中文 / EN** button to switch between Simplified Chinese and English. The first visit follows the browser language; subsequent visits use the saved preference. Switching preserves the current run, editor draft, and player-created names. Menus, built-in level names/descriptions, canvas labels, editor controls, feedback, and accessible labels are localized.
+
+After the rainbow victory effect, choose **Next level**, replay, or another level. Built-ins advance in their numbered order; saved custom levels advance in library order. The final level of either list shows an end-of-list message without a next button. Editor playtests offer replay and level selection. Skipping to the last level does not claim that all ten are completed.

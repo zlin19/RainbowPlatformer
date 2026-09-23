@@ -35,3 +35,7 @@ The victory effect is the expressive exception: six expanding rings and three wa
 ## Do's and Don'ts
 
 Show every built-in level without unlock gates. Show real layout thumbnails and clear difficulty names. Keep platform, hazard, start, and flag geometry honest. Do not replace missing collection progress with bright color; do not obscure the initial victory burst with an immediate modal.
+
+## Language and continuation update
+
+The top-right language control switches English/Simplified Chinese and remembers the choice locally. Browser language supplies the initial default. Localize controls, messages, built-in metadata and canvas labels while preserving player-authored level names and live game/editor state. After victory, explicitly ask whether to continue to the next level; retain replay and free selection. Advance within the current built-in/custom list only. Hide continuation at list end and during an editor playtest, and never equate finishing the last level with completing every level.

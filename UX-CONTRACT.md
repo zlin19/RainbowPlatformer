@@ -23,3 +23,7 @@ Saving creates a new custom level unless Save changes is explicitly chosen while
 The default entry opens the first built-in level. Selection resets run state, particles, and progress. The library pauses play; closing resumes unless a pause/win overlay remains. A saved level earns a completion badge when played from its library card; draft playtests do not alter completion badges. No remote publishing or account synchronization is implied.
 
 style.css owns the gray uncollected progress state; only .done takes the shared COLORS palette. victory.js owns the effect; app.js triggers it only on the engine's win event, delays the result overlay by 1.25 seconds, and clears the effect on restart or mode/level change. Reduced motion uses a static halo and immediate result feedback.
+
+## Language and continuation update
+
+The top-right language control switches English/Simplified Chinese and remembers the choice locally. Browser language supplies the initial default. Localize controls, messages, built-in metadata and canvas labels while preserving player-authored level names and live game/editor state. After victory, explicitly ask whether to continue to the next level; retain replay and free selection. Advance within the current built-in/custom list only. Hide continuation at list end and during an editor playtest, and never equate finishing the last level with completing every level.

@@ -23,3 +23,10 @@
 - Static UI audit: 21 actionless-button reports, from the same HTML-only inability to follow app.js handlers (including test-page handlers); all literal controls have handlers. No other rule IDs reported.
 - DESIGN.md lint was attempted offline but the @google/design.md package was not cached; no linter result is claimed. Runtime styling was visually checked.
 - Difficulty is a design progression rather than a measured player-study result. Custom level geometry is validated, but custom solvability is not automatically proven.
+
+## Chinese and next-level update — 2026-09-22
+
+- Syntax, test.js, test-levels.js, test-app.js and git diff --check pass. New checks cover language persistence, live progress preservation, translated pause/win prompts, reset on advancing, skipped final level, custom ordering and name preservation, playtests, and unavailable storage.
+- Isolated headless Chrome: Chinese browser default, switching both ways, reload persistence, ten library cards, actual engine victory → prompt → next-level click, 390 px editor and playtest completion all pass, without page errors or horizontal overflow. Desktop and narrow victory screenshots were visually inspected. No physical touch-device claim is made.
+- Strict static audit reports 23 actionless-button findings: the existing HTML-only detector does not follow app.js onclick bindings. New language/next buttons were exercised in Chrome. No other rule IDs were reported; audit JSON is in /tmp/rainbow-audit.json.
+- No build/dependency step is needed. DESIGN.md official lint remains unavailable offline as documented above.
