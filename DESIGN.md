@@ -16,7 +16,7 @@ Avenir Next, Avenir, Segoe UI, sans-serif for the interface; monospace for utili
 
 ## Layout
 
-Main document width caps at 1320 px with desktop padding of 48 px. The game uses a 1440 × 640 coordinate space scaled proportionally. The level library uses five card columns on desktop, three below 1000 px, and two below 600 px. The document owns scrolling; the library expands in normal flow. Editor controls wrap rather than clipping.
+Main document width caps at 1320 px with desktop padding of 48 px. The game uses a 1440 × 640 coordinate space scaled proportionally. The level library uses five card columns on desktop, three below 1000 px, and two below 600 px. Original trails, design-lab review levels, and player-created levels remain visually grouped. The document owns scrolling; the library expands in normal flow. Editor controls wrap rather than clipping.
 
 ## Elevation & Depth
 
@@ -28,9 +28,9 @@ Panels use 12–14 px radii, controls 7–9 px, platform edges 5 px. Level cards
 
 ## Components
 
-Native buttons own actions, toggle palettes, and level cards. app.js owns shared title/status/progress rendering and library cards. UX-CONTRACT.md defines selection and persistence behavior. No new component framework.
+Native buttons own actions, toggle palettes, level play targets, and the Bad/Okay/Good review choices. A level card is a bordered container with separate sibling play and review controls—never nested buttons. Selected reviews use a symbol, text, and semantic tint rather than color alone. app.js owns shared title/status/progress rendering and library cards. UX-CONTRACT.md defines selection and persistence behavior. No new component framework.
 
-The victory effect is the expressive exception: six expanding rings and three waves of colored confetti, rendered on a separate pointer-transparent canvas above the stage and result panel. Respect reduced motion with a static halo. Restart, mode changes, and level changes clear celebration state.
+Only the perfect victory effect is the expressive exception: six expanding rings and three waves of colored confetti, rendered on a separate pointer-transparent canvas above the stage and result panel. Normal achievement uses a small teal pulse, never rainbow rings/confetti. Respect reduced motion with a static rainbow halo for perfect and one teal ring for normal. Restart, mode changes, and level changes clear celebration state.
 
 ## Do's and Don'ts
 
@@ -42,8 +42,12 @@ The top-right language control switches English/Simplified Chinese and remembers
 
 ## Sequence teaching
 
-Maintain the existing palette and next-color arrow/outlined progress slot. Introductory geometry teaches the rule before adding danger: a sequential first trail, an overhead orange contact on the second, and a plain-platform return path before yellow on the third. The first three keep a safe recovery floor. The fourth applies the sequence above spikes. Wrong contacts name the touched and expected colors and gray out all progress; the latest collected color remains safe to repeat, but earlier colors are wrong. All four block faces count, once per uninterrupted contact. Custom playtests share these rules without inherited curated route hints.
+Maintain the existing palette and next-color arrow/outlined progress slot. Introductory geometry teaches the rule before adding danger: a sequential first trail, an overhead orange contact on the second, and a plain-platform return path before yellow on the third. The first three keep a safe recovery floor. The fourth applies the sequence above spikes. Wrong contacts preserve the colored collection slots and reset only the separately labeled perfect chain; the latest chain color remains safe to repeat, but earlier colors break the chain. All four block faces count, once per uninterrupted contact. Custom playtests share these rules without inherited curated route hints.
 
 ## Sound feedback
 
 Use the original synthesized sound selected after the MP3 comparison: sine fundamental at gain 0.11, octave overtone at gain 0.018, 8 ms attack, exponential release to 0.0001. Ordinary notes last 0.3 seconds, victory 0.85 seconds. C4 introduces/resets a run; six colors rise through D4–B4; victory completes the scale at C5. Safe repeats stay silent. Keep the existing top-right sound control and localized waiting/on/off/retry labels.
+
+## Achievement components
+
+Reuse showOverlay for normal/perfect variants: teal check for normal, gold star medal and existing rainbow border for perfect. The compact run-goal row distinguishes collection count, perfect chain and direction. Library cards display the best normal/perfect badge and forward/reverse availability. The editor uses a full-row native checkbox for the per-level reverse setting. On phones, result panels flow below the meadow so all actions are visible; the effects canvas remains aligned to the meadow. Runtime visual ownership stays in style.css; no new framework or font dependencies.

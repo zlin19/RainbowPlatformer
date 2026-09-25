@@ -1,6 +1,93 @@
 (function(root){
 'use strict';
 const zh={
+"LEVEL LIBRARY · EVERYTHING UNLOCKED":"关卡库 · 全部自由选择",
+"Play, compare, then leave your verdict.":"试玩、比较，再留下你的评价。",
+"The original trails remain together. New design-lab levels are ready for your review below.":"经典路线保留在一起，新一批设计实验关卡正在下方等待审批。",
+"Original trails":"经典关卡",
+"Design lab · review batch":"设计实验室 · 待审批批次",
+"Try a level, then mark it Bad, Okay, or Good. Ratings stay on this device.":"试玩后请选择差、中或好；评分只保存在此设备。",
+"Your verdict":"你的评价",
+"× Bad":"× 差",
+"~ Okay":"~ 中",
+"✓ Good":"✓ 好",
+"Bad":"差",
+"Okay":"中",
+"Good":"好",
+"Rating could not be saved on this device.":"无法在此设备保存评分。",
+"Select the active rating again to clear it.":"再次点击当前评分即可清除。",
+"Level ratings could not be loaded on this device.":"无法读取此设备上的关卡评分。",
+"Design lab":"设计实验",
+"Design lab +":"设计实验进阶",
+"Design puzzle":"路线实验",
+"Design puzzle +":"路线实验进阶",
+"Design challenge":"设计挑战",
+"Design challenge +":"设计挑战进阶",
+"DESIGN LAB":"设计实验",
+"DESIGN LAB +":"设计实验进阶",
+"DESIGN PUZZLE":"路线实验",
+"DESIGN PUZZLE +":"路线实验进阶",
+"DESIGN CHALLENGE":"设计挑战",
+"DESIGN CHALLENGE +":"设计挑战进阶",
+"Knock from below":"向上敲门",
+"Left-side brush":"左侧擦碰",
+"Right-side return":"右侧回程",
+"Four-face relay":"四面接力",
+"The tempting shortcut":"诱人的捷径",
+"High road, low road":"下层去，上层回",
+"Rebuild the rainbow":"重连彩虹",
+"Mirror circuit":"镜像回路",
+"Stay grounded and jump into the underside of every color in sequence.":"沿安全地面前进，依次起跳顶碰每个颜色的底面。",
+"Brush each suspended color from the left, then slip underneath on the way down.":"从左侧擦过每个悬空颜色，下落时再从其下方穿过。",
+"Begin on the right and sweep left, touching the far face of each hanging color.":"从右侧出发向左推进，依次触碰每个悬空颜色的右侧面。",
+"Land, bump, brush and land again through one continuous six-color relay.":"踩踏、头顶、擦边再落脚，连续完成六色动作接力。",
+"Yellow is easy to reach, but orange waits above and behind the safe stone.":"黄色近在眼前，但橙色藏在安全石阶的上方与后方。",
+"Collect three colors along the floor, climb, then bring the chain back across the upper route.":"先沿下层收集三色，再登高沿上层把连续链带回来。",
+"A forgiving floor supports one discovery lap and a deliberate perfect-recovery lap.":"宽容的安全地面支持先探索一圈，再专门跑一圈重建完美连续链。",
+"Start in the middle and choose a complete clockwise or counter-clockwise color route.":"从中央出发，选择一条完整的正向或反向颜色路线。",
+"Underside contact":"底面顶碰",
+"Left-side contact":"左侧触碰",
+"Right-side contact":"右侧触碰",
+"Mixed contact chain":"四面混合连续动作",
+"Route reading":"路线判断",
+"Out-and-back route":"上下层折返",
+"Normal versus perfect":"普通与完美分流",
+"Forward or reverse":"正序或逆序",
+"The colors are too high to stand on. Jump and knock from below.":"这些颜色无法踩上去，请从下方向上顶碰。",
+"Meet each hanging color from its left side, then pass below it as you fall.":"从左侧碰到每个悬空颜色，再在下落时从下方穿过。",
+"Travel right to left. Touch each hanging block from its right side.":"从右向左移动，依次触碰悬空色块的右侧面。",
+"Each color asks for a different approach. Watch the next-color arrow before committing.":"每种颜色都需要不同接触方式，行动前先观察下一色箭头。",
+"The forward yellow is bait. Climb the plain stones and return for orange first.":"前方黄色是诱饵；先沿普通石阶攀爬，折返收集橙色。",
+"Three colors lead out along the floor. Use the staircase to return across the sky.":"下层三色引你向前，再沿阶梯登高，从空中折返。",
+"The direct trail can finish the level. If your chain breaks, the safe floor lets you loop back and rebuild it.":"直线路线足以通关；若连续链中断，可借安全地面回环重建。",
+"Both ends can begin a perfect chain. Commit to red-to-purple or purple-to-red.":"两端都能开启完美连续链，请坚持红到紫或紫到红的完整方向。",
+"★ Perfect achievement":"★ 完美达成",
+"✓ Normal achievement":"✓ 普通达成",
+"Reverse order must be on or off.":"逆序设置必须为开启或关闭。",
+"PERFECT ACHIEVEMENT":"完美达成",
+"LEVEL COMPLETE":"关卡完成",
+"Perfect achievement":"完美达成",
+"Normal achievement":"普通达成",
+"Six colors in a complete sequence. Rainbow medal earned!":"连续依次收集六色，获得完美勋章！",
+"All six colors collected. Complete a full sequence for the perfect medal.":"已集齐六色！完整按顺序收集，即可获得完美勋章。",
+"Perfect sequence! Head for the flag.":"连续六色完成！前往旗帜领取完美勋章。",
+"All colors collected! Head for the flag, or rebuild a perfect sequence.":"六色集齐！可前往旗帜普通通关，或重新按顺序争取完美。",
+"Sequence broken. Colors kept. Start a new chain at red or purple.":"顺序中断，已收集颜色保留。从红色或紫色重新连起六色，可争取完美。",
+"Sequence broken. Colors kept. Start a new chain at red.":"顺序中断，已收集颜色保留。从红色重新连起六色，可争取完美。",
+"Fresh start. Begin with red or purple for a perfect sequence.":"重新开始。从红色或紫色出发，依次收集争取完美。",
+"Next in perfect sequence":"完美顺序的下一个颜色",
+"★ Perfect ready":"★ 已达完美，前往旗帜",
+"→ Red to purple":"→ 红色到紫色",
+"← Purple to red":"← 紫色到红色",
+"↔ Red or purple can start":"↔ 红色或紫色均可起步",
+"↔ Reverse allowed":"↔ 允许逆序",
+"→ Forward only":"→ 仅正序",
+"Allow reverse perfect sequence":"允许逆序获得完美",
+"Purple → blue → green → yellow → orange → red also earns perfect. Off by default.":"紫 → 蓝 → 绿 → 黄 → 橙 → 红也可获得完美。默认关闭。",
+"Collect every color to win. A complete sequence earns the perfect medal.":"集齐六色即可通关，完整按顺序收集可得完美勋章。",
+"Plain blocks and repeating the latest color are safe.":"普通平台和重复碰刚收集的颜色，都不会打断顺序。",
+"SIX COLORS. TWO WAYS TO WIN.":"六种颜色，两种达成。",
+"A wrong order keeps collected colors but breaks the perfect chain.":"碰错顺序不会丢失颜色，但会打断完美进度。",
 "Sound credits":"音效来源",
 "♪ Retry sound":"♪ 重试音效",
 "♪ Enable sound":"♪ 点击启音",
@@ -201,10 +288,16 @@ function create(storage,preferred='en'){
  let language=/^zh/i.test(preferred)?'zh':'en';try{const saved=storage.getItem('step-by-step-language');if(saved==='zh'||saved==='en')language=saved;}catch{}
  function t(source){source=String(source??'');if(language==='en')return source;if(Object.hasOwn(zh,source))return zh[source];
  let match;
+ if((match=source.match(/^Collected: (\d+)\/6$/)))return '已收集：'+match[1]+'/6';
+ if((match=source.match(/^Perfect chain: (\d+)\/6$/)))return '完美连续：'+match[1]+'/6';
  if((match=source.match(/^That was (red|orange|yellow|green|blue|purple)\. Expected (red|orange|yellow|green|blue|purple|the flag)\. All colors cleared — start with red\.$/)))return '碰到了'+t(match[1])+'色；本应'+(match[2]==='the flag'?'前往旗帜':'收集'+t(match[2])+'色')+'。进度已清空，请从红色重新收集。';
  if((match=source.match(/^RUN (\d+)$/)))return '第 '+match[1]+' 次尝试';
  if((match=source.match(/^LEVEL (\d+) · (.+)$/)))return '第 '+match[1]+' 关 · '+t(match[2]);
- if((match=source.match(/^(\d+) \/ 10 complete$/)))return '已通关 '+match[1]+' / 10';
+ if((match=source.match(/^(\d+) \/ (\d+) complete$/)))return '已通关 '+match[1]+' / '+match[2];
+ if((match=source.match(/^(\d+) \/ (\d+) reviewed$/)))return '已审批 '+match[1]+' / '+match[2];
+ if((match=source.match(/^Rate “(.*)”$/)))return '评价“'+match[1]+'”';
+ if((match=source.match(/^Rated “(.*)” as (Bad|Okay|Good)\.$/)))return '已将“'+match[1]+'”评为'+t(match[2])+'。';
+ if((match=source.match(/^Rating cleared for “(.*)”\.$/)))return '已清除“'+match[1]+'”的评分。';
  if((match=source.match(/^Place exactly one (red|orange|yellow|green|blue|purple) block\.$/)))return '请放置且仅放置一个'+t(match[1])+'色平台。';
  if((match=source.match(/^(Red|Orange|Yellow|Green|Blue|Purple) collected\. Next stop: (red|orange|yellow|green|blue|purple)\.$/)))return '已收集'+t(match[1])+'色，接下来是'+t(match[2])+'色。';
  if((match=source.match(/^That was (red|orange|yellow|green|blue|purple)\. Sequence reset — start with red\.$/)))return '踩到了'+t(match[1])+'色，顺序已重置，请从红色重新开始。';
